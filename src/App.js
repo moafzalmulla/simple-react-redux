@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { increment } from './actions/counter'
+import { increment } from './actions/increment'
 import { toggle } from './actions/lightswitch'
 import logo from './logo.svg';
 import './App.css';
@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   toggleLightSwitch = () => {
-    console.log('CHECK YOURSELF <MAN')
+    console.log('BG UPDATED')
     this.props.toggle()
   }
 
@@ -20,7 +20,7 @@ class App extends Component {
     console.log(this.props)
     const { lightswitch } = this.props
     
-    const background = lightswitch ? 'yellow' : 'black';
+    const background = lightswitch ? 'yellow' : 'pink';
 
     return (
       <div className="App" style={{backgroundColor: background} }>
